@@ -6,8 +6,9 @@ Route::get('/', function () {
     return view('blogs');
 });
 
-Route::get('/blogs/{blog}', function ($filename) {
-    $path = __DIR__ . "/../resources/blogs/$filename.html";
+Route::get('/blogs/{blog}', function ($slug) {
+    dd($slug);
+    $path = __DIR__ . "/../resources/blogs/$slug.html";
     if (!file_exists($path)) {
         //dd("hits");
         // return redirect('/');
@@ -17,4 +18,4 @@ Route::get('/blogs/{blog}', function ($filename) {
     return view('blog', [
         'blog' => $blog
     ]);
-});
+})->where('blog', '[A-z\d\-_]+'); //wildcard constraint
