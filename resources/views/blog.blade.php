@@ -5,16 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body>
-    <article>
-        <h1>First Blog</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Quo, quis culpa? Obcaecati exercitationem dicta pariatur expedita sequi.
-            Possimus, modi incidunt consequuntur inventore, illum deleniti natus vero perspiciatis, earum ullam fugit?</p>
-        <a href="/">go back</a>
-    </article>
+    <?= $blog; ?>
+    <a href="/">go back</a>
 </body>
 
 </html>

@@ -10,19 +10,19 @@
 
 <body>
     <article>
-        <h1><a href="/blog">First Blog</a></h1>
+        <h1><a href="/blogs/first-blog">First Blog</a></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Quo, quis culpa? Obcaecati exercitationem dicta pariatur expedita sequi.
             Possimus, modi incidunt consequuntur inventore, illum deleniti natus vero perspiciatis, earum ullam fugit?</p>
     </article>
     <article>
-        <h1><a href="/blog">Second Blog</a></h1>
+        <h1><a href="/blogs/second-blog">Second Blog</a></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Quo, quis culpa? Obcaecati exercitationem dicta pariatur expedita sequi.
             Possimus, modi incidunt consequuntur inventore, illum deleniti natus vero perspiciatis, earum ullam fugit?</p>
     </article>
     <article>
-        <h1><a href="/blog">Third Blog</a></h1>
+        <h1><a href="/blogs/third-blog">Third Blog</a></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Quo, quis culpa? Obcaecati exercitationem dicta pariatur expedita sequi.
             Possimus, modi incidunt consequuntur inventore, illum deleniti natus vero perspiciatis, earum ullam fugit?</p>
