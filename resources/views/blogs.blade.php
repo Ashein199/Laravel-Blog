@@ -7,17 +7,24 @@
     <title>Blogs</title>
     <link rel="stylesheet" href="/css/app.css">
 </head>
+<style>
+    .bg-gray {
+        background-color: gray
+    }
+</style>
 
 <body>
-    <?php foreach ($blogs as $blog) :?>
-    <h1><a href="blogs/{{ $blog->slug }}">{{ $blog->title }} </a></h1>
-    <div>
-        <p> published at -{{ $blog->date }} </p>
-        <p>
-            {{ $blog->intro }}
-        </p>
-    </div>
-    <?php endforeach;?>
+    @foreach ($blogs as $blog)
+        <div class={{ $loop->odd ? 'bg-gray' : '' }}> {{-- special variable-$loop --}}
+            <h1><a href="blogs/{{ $blog->slug }}">{{ $blog->title }} </a></h1>
+            <div>
+                <p> published at -{{ $blog->date }} </p>
+                <p>
+                    {{ $blog->intro }}
+                </p>
+            </div>
+        </div>
+    @endforeach
 </body>
 
 </html>
