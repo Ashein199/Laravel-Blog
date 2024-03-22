@@ -20,12 +20,10 @@ class Blog
     }
     public static function all()
     {
-
-        $files = File::files(resource_path('blogs'));
-        return array_map(function ($file) {
+        return collect(File::files(resource_path('blogs')))->map(function ($file) {
             $obj = YamlFrontMatter::parseFile($file);
             return new Blog($obj->title, $obj->slug, $obj->intro, $obj->body());
-        }, $files);
+        });
     }
     public static function find($slug)
     {
