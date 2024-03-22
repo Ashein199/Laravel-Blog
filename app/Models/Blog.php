@@ -22,12 +22,12 @@ class Blog
     {
 
         $files = File::files(resource_path('blogs'));
-        $blogs = [];
-        foreach ($files as $file) {
+        $blogs = array_map(function ($file) {
             $obj = YamlFrontMatter::parseFile($file);
             $blog = new Blog($obj->title, $obj->slug, $obj->intro, $obj->body());
-            $blogs[] = $blog;
-        }
+            return $blog;
+        }, $files);
+
         return $blogs;
     }
     public static function find($slug)
