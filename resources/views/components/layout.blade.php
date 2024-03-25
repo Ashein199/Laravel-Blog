@@ -14,7 +14,7 @@
         <li><a href="">about</a></li>
         <li><a href="">contact</a></li>
     </nav>
-    @yield('content')
+    {{ $content }}
 </body>
 
 </html>
