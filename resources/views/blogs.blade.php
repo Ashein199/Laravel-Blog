@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs</title>
-    <link rel="stylesheet" href="/css/app.css">
-</head>
-<style>
-    .bg-gray {
-        background-color: gray
-    }
-</style>
-
-<body>
-    <nav>
-        <li><a href="">home</a></li>
-        <li><a href="">about</a></li>
-        <li><a href="">contact</a></li>
-    </nav>
+@section('content')
     @foreach ($blogs as $blog)
         <div class={{ $loop->odd ? 'bg-gray' : '' }}> {{-- special variable-$loop --}}
             <h1><a href="blogs/{{ $blog->slug }}">{{ $blog->title }} </a></h1>
@@ -30,6 +12,4 @@
             </div>
         </div>
     @endforeach
-</body>
-
-</html>
+@endsection
